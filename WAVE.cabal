@@ -1,4 +1,5 @@
 Name: WAVE
+Description: Module for reading and writing audio files in the WAVE audio format.
 Build-Type: Simple
 Version: 0.1
 License: BSD3
@@ -10,6 +11,6 @@ Homepage: http://wiki.cs.pdx.edu/bartforge/wave
 Category: Data
 Build-Depends: base, bytestring
 Synopsis: WAVE audio file IO library
-Exposed-Modules: WAVE
+Exposed-Modules: Data.WAVE
 Stability: Alpha
 Extra-Source-Files: README

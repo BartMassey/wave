@@ -15,7 +15,7 @@
 -- audio reader and writer are sufficiently lazy that files
 -- larger than memory can be processed.
 
-module WAVE (
+module Data.WAVE (
   WAVE(..), WAVEHeader(..), WAVESample, WAVESamples,
   hGetWAVE, getWAVEFile,
   hPutWAVE, putWAVEFile,
