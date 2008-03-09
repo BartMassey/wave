@@ -3,17 +3,18 @@
 --- Please see the end of this file for license information.
 
 -- |This module implements reading and writing of the most
---common kinds of WAVE files.  WAVE files are Microsoft
---RIFF/WAVE audio sample files (originally based on the AIFF
---format), and commonly have the ".wav" filename extension.
---This module currently supports reading and writing
---single-section little-endian PCM audio files containing
---1..32-bit samples encoded according to the well-known WAVE
---sample encoding.  The interface audio stream format is a
---list of frames of 32-bit (`Int32`) left-justified signed
---PCM samples; each frame has one sample per channel.  The
---audio reader and writer are sufficiently lazy that files
---larger than memory can be processed.
+-- common kinds of WAVE files.  WAVE files are Microsoft
+-- RIFF audio sample files originally based on the AIFF
+-- format, and commonly have the .wav filename extension.
+-- This module currently supports reading and writing
+-- single-section little-endian PCM audio files containing
+-- up to 32-bit samples encoded according to the well-known WAVE
+-- sample encoding.  The interface audio stream format is a
+-- list of frames of 32-bit (`Int32`) left-justified signed
+-- PCM samples; each frame has one sample per channel.  The
+-- audio reader and writer are sufficiently lazy that files
+-- larger than memory can be processed.
+
 module WAVE (
   WAVE(..), WAVEHeader(..), WAVESample, WAVESamples,
   hGetWAVE, getWAVEFile,
