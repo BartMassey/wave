@@ -12,3 +12,4 @@ Build-Depends: base, bytestring
 Synopsis: WAVE audio file IO library
 Exposed-Modules: WAVE
 Stability: Alpha
+Extra-Source-Files: README
