@@ -19,8 +19,7 @@ module Data.WAVE (
   WAVE(..), WAVEHeader(..), WAVESample, WAVESamples,
   hGetWAVE, getWAVEFile,
   hPutWAVE, putWAVEFile,
-  sampleToDouble, doubleToSample,
-  tile, collect
+  sampleToDouble, doubleToSample
 ) where
 
 import Control.Monad
@@ -66,18 +65,13 @@ type WAVESamples = [[WAVESample]]
 data WAVE = WAVE { waveHeader :: WAVEHeader,
                    waveSamples :: WAVESamples }
 
-tile :: Int -> Int -> [a] -> [[a]]
-tile _ _ [] = []
-tile n o s =
-    let cur = take n s
-        rest = drop (n - o) s in
-    cur : (tile n o rest)
-
-collect :: Int -> [a] -> [[a]]
-collect n s = tile n 0 s
-
 bits_to_bytes :: (Integral a) => a -> a
 bits_to_bytes n = (n + 7) `div` 8
+
+collect :: Int -> [a] -> [[a]]
+collect n [] = []
+collect n s = h : collect n s'
+    where (h, s') = splitAt n s
 
 -- |Utility routine for working with audio data in floating
 -- point format.
