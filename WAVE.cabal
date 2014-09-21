@@ -1,16 +1,28 @@
 Name: WAVE
-Description: Module for reading and writing audio files in the WAVE audio format.
+Description: Module for reading and writing audio files in WAVE format.
 Build-Type: Simple
-Version: 0.1.1
+Version: 0.1.2
 License: BSD3
 License-File: COPYING
 Author: Bart Massey <bart@cs.pdx.edu>
-Copyright: Copyright (C) 2007 Bart Massey
+Copyright: Copyright (c) 2014 Bart Massey
 Maintainer: Bart Massey <bart@cs.pdx.edu>
-Homepage: http://wiki.cs.pdx.edu/bartforge/truelevel
+Homepage: http://github.com/BartMassey/WAVE
 Category: Data, Sound
-Build-Depends: base, bytestring
 Synopsis: WAVE audio file IO library
-Exposed-Modules: Data.WAVE
 Stability: Alpha
-Extra-Source-Files: README
+Extra-Source-Files: README.md
+Cabal-Version: >=1.2
+
+Library
+  Exposed-Modules: Data.WAVE
+  Build-Depends: base >=4&&<5, bytestring>=0.10&&<1
+
+Source-repository head
+  Type: git
+  Location: https://github.com/BartMassey/WAVE.git
+
+Source-repository this
+  Type: git
+  Location: https://github.com/BartMassey/WAVE.git
+  Tag: v0.1.2
