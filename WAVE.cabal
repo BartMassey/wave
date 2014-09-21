@@ -12,7 +12,7 @@ Category: Data, Sound
 Synopsis: WAVE audio file IO library
 Stability: Alpha
 Extra-Source-Files: README.md
-Cabal-Version: >=1.2
+Cabal-Version: >=1.6
 
 Library
   Exposed-Modules: Data.WAVE
