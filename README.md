@@ -1,5 +1,5 @@
 # WAVE format audio file IO library
-Copyright &copy; 2008-2014 Bart Massey
+Copyright &copy; 2008-2020 Bart Massey
 
 This library provides `Data.WAVE`, a module for reading and
 writing audio files in the
@@ -11,6 +11,11 @@ This is definitely a simple implementation: a number of
 nonlinear encodings), and non-WAVE audio files are in no way
 supported.  I thought others might find it useful, though. I
 also have released other code that depends on it.
+
+The source distribution contains a couple of demo programs:
+
+* `writetest.hs`: Writes a square wave into a file.
+* `readtest.hs`: Displays information for a given WAVE file.
 
 This program is licensed under the "3-clause 'new' BSD
 License". Please see the file `COPYING` in this distribution
